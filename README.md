@@ -6,3 +6,8 @@ a small collection of simple browser games, programmed in javascript
 - [ ] Mastermind
 - [ ] Stack it (Tetris)
 - [ ] Monty Hall Game
+- [ ] 2D Space Racer
+- [ ] Memory
+- [ ] Snake
+- [ ] Moorhuhn
+- [ ] Turtle Race

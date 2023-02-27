@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+    <link rel="icon" href="" type="image/svg+xml">
+    <title>Monty Hall Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Monty Hall Game</h1>
+   <section id="rules-section">
+    <h2 id="game-instruction">Choose one of the three doors.</h2>
+   </section>
+   <section id="doors-section">
+    <div id="door-1">
+        <div class="door-sign">#1</div>
+        <div class="door"></div>
+    </div>
+    <div id="door-2">
+        <div class="door-sign">#2</div>
+        <div class="door"></div>
+    </div>
+    <div id="door-3">
+        <div class="door-sign">#3</div>
+        <div class="door"></div>
+    </div>
+   </section>
+   <section id="stats-section">
+    <h2>Your Stats</h2>
+    <div class="stats-container" id="stats-switched">
+        <h4>You've stayed:</h4>
+        <label for="switched-cars">Cars:</label>
+        <p id="switched-cars">0</p>
+        <label for="switched-goats">Goats:</label>
+        <p id="switched-goats">0</p>
+        <label for="switched-winrate">Car win Rate:</label>
+        <p id="switched-winrate">0%</p>
+    </div>
+    <div class="stats-container" id="stats-stayed">
+        <h4>You've stayed:</h4>
+        <label for="stayed-cars">Cars:</label>
+        <p id="stayed-cars">0</p>
+        <label for="stayed-goats">Goats:</label>
+        <p id="stayed-goats">0</p>
+        <label for="stayed-winrate">Car win Rate:</label>
+        <p id="stayed-winrate">0%</p>
+    </div>
+   </section>
+   <footer>
+    <p>Made by <a href="https://github.com/bj6rn" target="_blank">Me</a> &#129305;</p>
+   </footer>
+  </body>
+</html>

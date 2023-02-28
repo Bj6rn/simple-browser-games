@@ -20,23 +20,19 @@
     font-size: 1.5rem;
   }
 
-  /*-----------------------*/
-  /*Zuweisung von Variablen*/
-  /*-----------------------*/
   :root {
     --background-color: #4E6E81;
+    --sub-color: #2E3840;
+    --door-color: hsl(0deg 30% 45%);
     --font-color: #ffffff;
+    --title-color: hsl(80deg 30% 60%);
     --door-width: clamp(150px, calc(80vw/3), 300px);
     --door-heigth: calc(var(--door-width)*1.25)
   }
-  
-  /*-----------------------------*/
-  /*Algemeine Designeinstellungen*/
-  /*-----------------------------*/
-  
+    
   #title {
-    text-shadow: 2.5px 5px 5px #2e3840;
-    color: hsl(80deg 30% 60%);
+    text-shadow: 2.5px 5px 5px var(--sub-color);
+    color: var(--title-color);
   }
 
   footer {
@@ -54,29 +50,56 @@
   }
 
   .door-sign {
-    background-color: #2E3840;
+    background-color: var(--sub-color);
     font-weight: bold;
     text-align: center;
     padding: 10px;
     margin: 0px;
-    border: calc(var(--door-width)/60) solid black;
+    border: calc(var(--door-width)/60) solid var(--sub-color);
   }
 
   .door {
-    background-color: hsl(0deg 30% 45%);
     width: var(--door-width);
     height: var(--door-heigth);
     margin: 0px;
-    padding: 10px;
-    border: calc(var(--door-width)/60) solid black;
+    padding: 0px;
+    border: calc(var(--door-width)/60) solid var(--sub-color);
     border-top: 0px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .door .left {
+    content: "";
+    background-color: var(--door-color);
+    height: 100%;
+    width: 50%;
+    animation-fill-mode: forwards;
+  }
+
+  .door .right {
+    content: "";
+    background-color: var(--door-color);
+    height: 100%;
+    width: 50%;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes open-door {
+    from { width: 50%; }
+    to { width: 1%; }
+  }
+
+  @keyframes close-door {
+    from { width: 1%; }
+    to { width: 50%; }
   }
 
   .user-choice {
-    box-shadow: 0px 0px 10px 5px greenyellow;
+    box-shadow: 0px 0px 10px 2.5px var(--title-color);
   }
 
   #stats-section {
@@ -95,7 +118,6 @@
   }
 
   .stats-container {
-    justify-self: flex-end;
     width: max-content;
     display: grid;
     justify-content: center;
@@ -104,7 +126,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--sub-color);
     padding: 10px;
   }
 
@@ -121,4 +143,9 @@
   .stats-container p {
     grid-column: 2 / span 1;
     margin: 0;
+  }
+
+  #rules-section {
+    max-width: clamp(300px, 60%, 700px);
+    margin: auto;
   }
